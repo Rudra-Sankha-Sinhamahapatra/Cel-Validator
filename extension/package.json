@@ -1,0 +1,66 @@
+{
+    "name": "cel-validator",
+    "displayName": "CEL Validator",
+    "description": "CEL Validator for VS Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Linters"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "cel",
+                "aliases": [
+                    "Common Expression Language",
+                    "CEL"
+                ],
+                "extensions": [
+                    ".cel"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "id",
+                "scopeName": "source.id",
+                "path": "./syntaxes/id.tmLanguage."
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "CEL Validator",
+            "properties": {
+                "celValidator.enable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/Disable CEL Validator"
+                },
+                "celValidator.serverPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Path to the CEL validator Language server executable"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+        "@types/node": "^16.18.126",
+        "@types/vscode": "^1.74.0",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^8.1.0"
+    }
+}
