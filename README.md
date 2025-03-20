@@ -23,7 +23,9 @@ https://github.com/user-attachments/assets/bd79a1fd-a0ec-441e-b154-957873f47e0e
 ### Prerequisites
 
 - VS Code 1.75.0 or later
-- Go 1.14 or later (for building the server)
+- Go 1.24.1 or later (for building the server)
+- Node.js 22.13.1 or later
+- npm 10.9.2 or later
 
 ### Building from Source
 
