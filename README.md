@@ -2,6 +2,10 @@
 
 A VS Code extension that provides syntax highlighting, validation, and error detection for CEL (Common Expression Language) expressions.
 
+# Demo
+
+https://github.com/user-attachments/assets/bd79a1fd-a0ec-441e-b154-957873f47e0e
+
 ## Features
 
 - Syntax highlighting for CEL expressions
