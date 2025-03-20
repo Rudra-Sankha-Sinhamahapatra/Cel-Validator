@@ -1,0 +1,67 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Common Expression Language",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#functions"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.cel",
+                    "match": "\\b(in|has|true|false|null)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.cel",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.cel",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.cel",
+                    "match": "(\\+|-|\\*|/|%|==|!=|<=|>=|<|>|&&|\\|\\||!|\\?)"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.cel",
+                    "match": "\\b([0-9]+\\.?[0-9]*|[0-9]*\\.[0-9]+)\\b"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.cel",
+                    "match": "\\b(size|has|all|exists|map|filter|contains|containsAll)\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.cel"
+}
