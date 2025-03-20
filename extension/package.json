@@ -27,9 +27,9 @@
         ],
         "grammars": [
             {
-                "language": "id",
-                "scopeName": "source.id",
-                "path": "./syntaxes/id.tmLanguage."
+                "language": "cel",
+                "scopeName": "source.cel",
+                "path": "./syntaxes/cel.tmLanguage.json"
             }
         ],
         "configuration": {
@@ -61,6 +61,7 @@
         "typescript": "^5.0.0"
     },
     "dependencies": {
+        "fs": "^0.0.1-security",
         "vscode-languageclient": "^8.1.0"
     }
 }
